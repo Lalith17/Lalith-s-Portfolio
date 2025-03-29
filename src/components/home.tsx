@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 import HeroSection from "./hero/HeroSection";
 import ContentSection from "./ContentSection";
 import AboutMeSection from "./AboutMeSection";
@@ -11,6 +11,9 @@ import ThemeToggle from "./ThemeToggle";
 import ChatAssistant from "./ChatAssistant";
 import PerformanceMonitor from "./hero/PerformanceMonitor";
 import Footer from "./Footer";
+import ParticleSystem from "./ParticleSystem";
+import ScrollTransition from "./ScrollTransition";
+import SectionTransition from "./SectionTransition";
 
 interface HomeProps {
   title?: string;
@@ -39,13 +42,35 @@ const Home: React.FC<HomeProps> = ({
     window.scrollBy({ top: window.innerHeight, behavior: "smooth" });
   };
 
+  // Refs for scroll transitions
+  const aboutRef = useRef<HTMLDivElement>(null);
+  const projectsRef = useRef<HTMLDivElement>(null);
+  const skillsRef = useRef<HTMLDivElement>(null);
+  const journeyRef = useRef<HTMLDivElement>(null);
+  const resumeRef = useRef<HTMLDivElement>(null);
+  const contactRef = useRef<HTMLDivElement>(null);
+
+  // Scroll progress for parallax effects
+  const { scrollYProgress } = useScroll();
+  const backgroundY = useTransform(scrollYProgress, [0, 1], [0, 300]);
+
   return (
     <motion.div
-      className="min-h-screen bg-black"
+      className="min-h-screen bg-black relative"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
+      {/* Interactive Particle System - Global */}
+      <ParticleSystem
+        count={80}
+        color="#8b5cf6"
+        size={3}
+        speed={0.5}
+        interactive={true}
+        className="fixed inset-0 z-10 opacity-30 pointer-events-none"
+      />
+
       {/* Hero Section */}
       <HeroSection
         title={title}
@@ -58,48 +83,63 @@ const Home: React.FC<HomeProps> = ({
         onScrollToContent={handleScrollToContent}
       />
 
-      {/* Theme Toggle - Fixed position */}
-      <div className="fixed top-4 right-4 z-50">
-        <ThemeToggle />
-      </div>
+      {/* Theme Toggle removed */}
 
       {/* About Me Section */}
-      <AboutMeSection />
+      <div ref={aboutRef}>
+        <ScrollTransition transitionType="fade" threshold={0.3}>
+          <AboutMeSection />
+        </ScrollTransition>
+      </div>
 
       {/* Projects Section */}
-      <ContentSection />
+      <div ref={projectsRef}>
+        <ScrollTransition transitionType="slide" threshold={0.3}>
+          <ContentSection />
+        </ScrollTransition>
+      </div>
 
       {/* Skills Section */}
-      <SkillsSection />
+      <div ref={skillsRef}>
+        <ScrollTransition transitionType="scale" threshold={0.3}>
+          <SkillsSection />
+        </ScrollTransition>
+      </div>
 
       {/* Journey Section - Storytelling */}
-      <JourneySection />
+      <div ref={journeyRef}>
+        <ScrollTransition transitionType="blur" threshold={0.3}>
+          <JourneySection />
+        </ScrollTransition>
+      </div>
 
       {/* Resume Section with Download Option */}
-      <ResumeSection />
+      <div ref={resumeRef}>
+        <ScrollTransition transitionType="rotate" threshold={0.3}>
+          <ResumeSection />
+        </ScrollTransition>
+      </div>
 
       {/* Contact Form Section */}
-      <section className="w-full py-20 px-4 bg-black">
-        <div className="max-w-5xl mx-auto">
-          <motion.div
-            className="text-center mb-12"
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-              Contact Me
-            </h2>
-            <p className="text-gray-300 max-w-2xl mx-auto">
-              Have a project in mind or want to discuss opportunities? Get in
-              touch!
-            </p>
-          </motion.div>
+      <div ref={contactRef}>
+        <ScrollTransition transitionType="fade" threshold={0.3}>
+          <section className="w-full py-20 px-4 bg-black">
+            <div className="max-w-5xl mx-auto">
+              <SectionTransition className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                  Contact Me
+                </h2>
+                <p className="text-gray-300 max-w-2xl mx-auto">
+                  Have a project in mind or want to discuss opportunities? Get
+                  in touch!
+                </p>
+              </SectionTransition>
 
-          <ContactForm />
-        </div>
-      </section>
+              <ContactForm />
+            </div>
+          </section>
+        </ScrollTransition>
+      </div>
 
       {/* Footer with Social Links */}
       <Footer />
