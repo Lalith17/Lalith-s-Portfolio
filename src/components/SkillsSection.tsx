@@ -237,7 +237,8 @@ const SkillsSection: React.FC = () => {
         </motion.div>
 
         {/* Tabs */}
-        <div className="flex justify-center gap-4 mb-12">
+        {/* Tabs */}
+        <div className="flex justify-center gap-4 mb-12 overflow-x-auto px-4 ml-4">
           {(
             Object.keys(skillCategories) as Array<keyof typeof skillCategories>
           ).map((category) => (
@@ -260,7 +261,7 @@ const SkillsSection: React.FC = () => {
 
         {/* Skills Grid */}
         <motion.div
-          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 px-4"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
@@ -269,7 +270,7 @@ const SkillsSection: React.FC = () => {
           {skillCategories[activeTab].map((skill, index) => (
             <motion.div
               key={index}
-              className="bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-700 p-4 flex flex-col items-center justify-center hover:border-purple-500 transition-all duration-300"
+              className="bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-700 p-3 flex flex-col items-center justify-center hover:border-purple-500 transition-all duration-300 min-w-[120px]"
               variants={itemVariants}
               whileHover={{
                 y: -5,
