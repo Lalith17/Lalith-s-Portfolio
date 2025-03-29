@@ -26,7 +26,7 @@ const ChatAssistant: React.FC = () => {
         institution: "VIT-AP University",
         degree: "B.Tech in Computer Science",
         years: "2022 - 2026",
-        gpa: "9.17",
+        gpa: "9.18",
       },
       {
         institution: "Resonance Junior College",
@@ -39,10 +39,10 @@ const ChatAssistant: React.FC = () => {
     experience: [
       {
         position: "Generative AI Intern",
-        company: "PetThinQ Inc.",
-        period: "Feb 2025 - May 2025",
+        company: "cloud9vacation.com",
+        period: "Nov 2024 - Feb 2025",
         description:
-          "Engineering an AI-ready e-commerce platform with React.js, FastAPI, and AWS. Sole developer building web pages, APIs, and Shopify headless integrations.",
+          "Developed and deployed an AI-powered travel planner website, offering 100+ packages                  with optimized response times. Integrated back-end services to efficiently handle user data,                      package details, and transactions.",
       },
       {
         position: "Full Stack Developer",
@@ -213,14 +213,14 @@ const ChatAssistant: React.FC = () => {
         lowerQuery.includes("gpa") ||
         context.some((c) => c.includes("gpa"))
       ) {
-        return `Lalith maintains an impressive GPA of 9.17 at VIT-AP University, which places him among the top performers in his class. During his intermediate education, he achieved a GPA of 9.7 in challenging subjects like Mathematics, Physics, and Chemistry.`;
+        return `Lalith maintains an impressive GPA of 9.18 at VIT-AP University, which places him among the top performers in his class. During his intermediate education, he achieved a GPA of 9.7 in challenging subjects like Mathematics, Physics, and Chemistry.`;
       }
 
       if (lowerQuery.includes("when") || lowerQuery.includes("year")) {
         return `Lalith began his B.Tech in Computer Science at VIT-AP University in 2022 and is expected to graduate in 2026. Before that, he completed his intermediate education at Resonance Junior College from 2020 to 2022.`;
       }
 
-      return `Lalith is pursuing a B.Tech in Computer Science at VIT-AP University (2022-2026) with a GPA of 9.17. He previously completed his intermediate education at Resonance Junior College (2020-2022) with a GPA of 9.7, studying Mathematics, Physics, and Chemistry. His strong academic background has provided him with a solid foundation in computer science principles and mathematical thinking.`;
+      return `Lalith is pursuing a B.Tech in Computer Science at VIT-AP University (2022-2026) with a GPA of 9.18. He previously completed his intermediate education at Resonance Junior College (2020-2022) with a GPA of 9.7, studying Mathematics, Physics, and Chemistry. His strong academic background has provided him with a solid foundation in computer science principles and mathematical thinking.`;
     }
 
     // Experience related queries
@@ -240,7 +240,7 @@ const ChatAssistant: React.FC = () => {
         lowerQuery.includes("petthinq") ||
         context.some((c) => c.includes("petthinq"))
       ) {
-        return `At PetThinQ Inc. (Feb-May 2025), Lalith worked as a Generative AI Intern where he engineered an AI-ready e-commerce platform. He was the sole developer responsible for building web pages with React.js, creating APIs with FastAPI, and implementing Shopify headless integrations. This experience allowed him to work with cutting-edge AI technologies in a real-world business context.`;
+        return `At Cloud9Vacation.com, Lalith worked as a Generative AI Intern, where he developed and deployed an AI-powered travel planner website featuring 100+ packages with optimized response times. He was responsible for integrating back-end services to manage user data, package details, and transactions efficiently. This experience enabled him to apply AI-driven solutions in a real-world travel industry setting.`;
       }
 
       if (
@@ -250,7 +250,7 @@ const ChatAssistant: React.FC = () => {
         return `At Honeyfilm Pvt Ltd. (June-Sept 2024), Lalith served as a Full Stack Developer where he led a 4-member team to develop two scalable applications. He utilized Firebase for backend development, managing 10+ databases, implementing API calls, and handling user data management. This role helped him develop both technical and leadership skills.`;
       }
 
-      return `Lalith has gained valuable industry experience through two key roles: As a Generative AI Intern at PetThinQ Inc. (Feb-May 2025), he engineered an AI-ready e-commerce platform with React.js, FastAPI, and AWS. Previously, as a Full Stack Developer at Honeyfilm Pvt Ltd. (June-Sept 2024), he led a 4-member team to develop scalable apps using Firebase and Flutter. These experiences have given him practical expertise in both frontend and backend development, as well as team leadership.`;
+      return `Lalith has gained valuable industry experience through two key roles: As a Generative AI Intern at cloud9vacation.com (Nov 2024-Feb 2025), he engineered an AI-powered travel planner website featuring 100+ packages with optimized response times. Previously, as a Full Stack Developer at Honeyfilm Pvt Ltd. (June-Sept 2024), he led a 4-member team to develop scalable apps using Firebase and Flutter. These experiences have given him practical expertise in both frontend and backend development, as well as team leadership.`;
     }
 
     // Project related queries
@@ -451,7 +451,7 @@ const ChatAssistant: React.FC = () => {
       lowerQuery.includes("introduction") ||
       lowerQuery.includes("background")
     ) {
-      return `Megha Sai Lalith Vallamkonda is a Computer Science student at VIT-AP University (2022-2026) with a strong academic record (GPA: 9.17) and practical experience in software development. He has worked as a Generative AI Intern at PetThinQ Inc. and as a Full Stack Developer at Honeyfilm Pvt Ltd. His technical skills include Java, Python, JavaScript, Flutter, Firebase, and AWS. He's also co-authored a research paper on hybrid ML-DL models presented at an IEEE conference. Beyond academics, he serves as President of the Milestone Club, managing 150+ participants in technical events. Lalith is passionate about building scalable applications and exploring AI/ML technologies.`;
+      return `Megha Sai Lalith Vallamkonda is a Computer Science student at VIT-AP University (2022-2026) with a strong academic record (GPA: 9.18) and practical experience in software development. He has worked as a Generative AI Intern at Cloud9Vacation.com and as a Full Stack Developer at Honeyfilm Pvt Ltd. His technical skills include Java, Python, JavaScript, Flutter, Firebase, and AWS. He's also co-authored a research paper on hybrid ML-DL models presented at an IEEE conference. Beyond academics, he serves as President of the Milestone Club, managing 150+ participants in technical events. Lalith is passionate about building scalable applications and exploring AI/ML technologies.`;
     }
 
     // Default response for other queries

@@ -26,16 +26,17 @@ const AboutMeSection: React.FC = () => {
               <p className="text-gray-300 mb-6 text-lg">
                 I'm a computer science student at VIT-AP University with a
                 passion for full-stack development and generative AI. Currently
-                pursuing my B.Tech with a 9.17 GPA, I combine strong technical
+                pursuing my B.Tech with a 9.18 GPA, I combine strong technical
                 foundations with real-world project experience to create
                 innovative solutions.
               </p>
 
               <p className="text-gray-300 mb-6 text-lg">
-                As a Generative AI Intern at PetThinQ Inc., I'm engineering an
-                AI-ready e-commerce platform using React.js, FastAPI, and AWS. I
-                previously led a team at Honeyfilm Pvt Ltd. developing scalable
-                apps with Firebase and Flutter.
+                As a Generative AI Intern at Cloud9Vacation.com, I developed and
+                deployed an AI-powered travel planner website, offering 100+
+                packages with optimized response times. Integrated back-end
+                services to efficiently handle user data, package details, and
+                transactions.
               </p>
 
               <h3 className="text-2xl font-bold text-white mt-10 mb-4">
@@ -43,7 +44,7 @@ const AboutMeSection: React.FC = () => {
               </h3>
               <p className="text-gray-300 mb-2">
                 B.Tech in Computer Science at VIT-AP University (2022-2026, GPA:
-                9.17)
+                9.18)
               </p>
               <p className="text-gray-300 mb-6">
                 Intermediate at Resonance Junior College (2020-2022, GPA: 9.7)
@@ -66,7 +67,7 @@ const AboutMeSection: React.FC = () => {
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
                 <span className="text-5xl font-bold text-purple-400 mb-2">
-                  9.17
+                  9.18
                 </span>
                 <span className="text-gray-300 text-center">
                   University GPA
@@ -92,7 +93,7 @@ const AboutMeSection: React.FC = () => {
                 transition={{ type: "spring", stiffness: 400, damping: 10 }}
               >
                 <span className="text-5xl font-bold text-pink-400 mb-2">
-                  6+
+                  30+
                 </span>
                 <span className="text-gray-300 text-center">
                   Certifications

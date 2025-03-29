@@ -46,9 +46,9 @@ const ResumeSection: React.FC = () => {
           <div className="space-y-6">
             <TimelineItem
               title="Generative AI Intern"
-              company="PetThinQ Inc."
-              date="Feb 2025 - May 2025"
-              description="Engineering an AI-ready e-commerce platform with React.js, FastAPI, and AWS. Sole developer building web pages, APIs, and Shopify headless integrations."
+              company="cloud9vacation.com"
+              date="Nov 2024 - Feb 2025"
+              description="Developed and deployed an AI-powered travel planner website, offering 100+ packages                  with optimized response times. Integrated back-end services to efficiently handle user data,                      package details, and transactions."
             />
             <TimelineItem
               title="Full Stack Developer"
@@ -65,7 +65,7 @@ const ResumeSection: React.FC = () => {
               title="B.Tech in Computer Science"
               company="VIT-AP University"
               date="2022 - 2026"
-              description="GPA: 9.17"
+              description="GPA: 9.18"
             />
             <TimelineItem
               title="Intermediate"
