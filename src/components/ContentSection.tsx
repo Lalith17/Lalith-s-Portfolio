@@ -239,17 +239,19 @@ const ContentSection: React.FC<ContentSectionProps> = ({
   ];
 
   // Filter projects based on active filter and search query
-  const filteredProjects = projects.filter((project) => {
+  const filteredProjects = projects?.filter((project) => {
+    if (!project) return false;
     const matchesFilter =
       activeFilter === "All" || project.category === activeFilter;
     const matchesSearch =
+      searchQuery === "" ||
       project.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
       project.description.toLowerCase().includes(searchQuery.toLowerCase()) ||
       project.tags.some((tag) =>
         tag.toLowerCase().includes(searchQuery.toLowerCase()),
       );
     return matchesFilter && matchesSearch;
-  });
+  }) || [];
 
   const containerVariants = {
     hidden: { opacity: 0 },
