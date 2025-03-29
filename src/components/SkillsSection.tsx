@@ -238,13 +238,13 @@ const SkillsSection: React.FC = () => {
 
         {/* Tabs */}
         {/* Tabs */}
-        <div className="flex justify-center gap-4 mb-12 overflow-x-auto px-4 ml-4">
+        <div className="flex flex-wrap justify-center gap-4 mb-12 px-2">
           {(
             Object.keys(skillCategories) as Array<keyof typeof skillCategories>
           ).map((category) => (
             <motion.button
               key={category}
-              className={`px-6 py-3 rounded-full flex items-center gap-2 ${activeTab === category ? "bg-purple-900/50 text-white border border-purple-500" : "bg-gray-800/50 text-gray-300 border border-gray-700"}`}
+              className={`px-4 py-2 rounded-full flex items-center gap-2 text-sm md:text-base md:px-6 md:py-3 ${activeTab === category ? "bg-purple-900/50 text-white border border-purple-500" : "bg-gray-800/50 text-gray-300 border border-gray-700"}`}
               onClick={() => setActiveTab(category)}
               variants={tabVariants}
               animate={activeTab === category ? "active" : "inactive"}
