@@ -16,8 +16,10 @@ const ResumeSection: React.FC = () => {
   >("experience");
 
   const handleDownloadResume = () => {
-    // In a real implementation, this would link to an actual PDF file
-    alert("Resume download would start here");
+    window.open(
+      "https://drive.google.com/file/d/1uDLlZG45Ts_3DkpRaJJnJHFTLTSUJthF/view?usp=drive_link",
+      "_blank",
+    );
   };
 
   const tabs = [
@@ -48,7 +50,7 @@ const ResumeSection: React.FC = () => {
               title="Generative AI Intern"
               company="cloud9vacation.com"
               date="Nov 2024 - Feb 2025"
-              description="Developed and deployed an AI-powered travel planner website, offering 100+ packages                  with optimized response times. Integrated back-end services to efficiently handle user data,                      package details, and transactions."
+              description="Developed and deployed an AI-powered travel planner website, offering 100+ packages with optimized response times. Integrated back-end services to efficiently handle user data, package details, and transactions."
             />
             <TimelineItem
               title="Full Stack Developer"
@@ -151,7 +153,7 @@ const ResumeSection: React.FC = () => {
               onClick={handleDownloadResume}
               className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 text-white font-medium rounded-md transition-all duration-300"
             >
-              <FileDown className="mr-2 h-5 w-5" /> Download Resume
+              <FileDown className="mr-2 h-5 w-5" /> View Resume
             </Button>
 
             <Button
