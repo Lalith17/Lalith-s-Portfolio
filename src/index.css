@@ -70,6 +70,7 @@
   * {
     @apply border-border;
   }
+
   body {
     @apply bg-background text-foreground transition-colors duration-300;
   }
@@ -84,9 +85,11 @@
   0% {
     transform: translateY(0) translateX(0);
   }
+
   50% {
     transform: translateY(-20px) translateX(10px);
   }
+
   100% {
     transform: translateY(0) translateX(0);
   }
@@ -98,6 +101,16 @@
 
 .transform-style-3d {
   transform-style: preserve-3d;
+}
+
+.container {
+  position: relative;
+}
+
+.scroll-container {
+  position: relative;
+  /* Fixes the issue */
+  overflow: hidden;
 }
 
 .transform-gpu {

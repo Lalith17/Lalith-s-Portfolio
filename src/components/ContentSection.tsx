@@ -40,10 +40,11 @@ const ContentSection: React.FC<ContentSectionProps> = ({
       description:
         "Co-authored paper on hybrid CatBoost-ANN model for predicting compressive strength with 94% accuracy. Presented at IEEE's ICDCC 2024 Conference.",
       image:
-        "https://images.unsplash.com/photo-1507668077129-56e32842fceb?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+        "https://static.vecteezy.com/system/resources/previews/023/826/514/large_2x/ai-artificial-intelligence-humanoid-side-portrait-view-with-blue-and-orange-vibrant-neon-and-copy-space-artificial-intelligence-technology-concept-ai-generated-illustration-free-photo.jpg",
       tags: ["Machine Learning", "Research", "IEEE", "Python"],
-      category: "Research",
-      githubUrl: "https://github.com/Lalith17/hybrid-ml-dl-model",
+      category: "AI & Machine Learning",
+      githubUrl:
+        "https://github.com/Lalith17/Hybrid-Model-for-Concrete-Strength-Prediction",
     },
     {
       id: "2",
@@ -51,10 +52,11 @@ const ContentSection: React.FC<ContentSectionProps> = ({
       description:
         "Built server-less back-end using Firebase Authentication & Firestore with role-based access for 500+ users. Implemented real-time data synchronization.",
       image:
-        "https://images.unsplash.com/photo-1606857521015-7f9fcf423740?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+        "https://www.oist.jp/sites/default/files/photos/20180224-graduation-ceremony-graduates.jpg",
       tags: ["Firebase", "Authentication", "Dashboard", "React"],
-      category: "Web Development",
-      githubUrl: "https://github.com/Lalith17/paperless-scholarship",
+      category: "Web & App Development",
+      githubUrl:
+        "https://github.com/Lalith17/Paperless-Scholarship-Disbursement-System-for-PMSS",
     },
     {
       id: "3",
@@ -64,41 +66,164 @@ const ContentSection: React.FC<ContentSectionProps> = ({
       image:
         "https://images.unsplash.com/photo-1576091160550-2173dba999ef?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
       tags: ["Healthcare", "Flutter", "Security", "Firebase"],
-      category: "Healthcare",
-      githubUrl: "https://github.com/Lalith17/medinet",
+      category: "Web & App Development",
+      githubUrl: "https://github.com/Lalith17/MediNet",
     },
     {
       id: "4",
-      title: "E-Commerce Platform",
+      title: "DocClassify - Document Classification & OCR",
       description:
-        "Developed a full-featured e-commerce platform with product catalog, shopping cart, and secure payment processing using Stripe integration.",
+        "Built a document classification system using FastAPI, OpenCV, and Tesseract OCR to classify invoices, emails, and resumes. Integrated a machine learning model with Random Forest for accurate classification.",
       image:
-        "https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      tags: ["React", "Node.js", "Stripe", "MongoDB"],
-      category: "E-commerce",
-      githubUrl: "https://github.com/Lalith17/ecommerce-platform",
+    "https://www.slideteam.net/media/catalog/product/cache/1280x720/d/o/document_process_workflow_automation_illustration_slide01.jpg",
+      tags: ["AI", "OCR", "Machine Learning", "FastAPI"],
+      category: "AI & Machine Learning",
+      githubUrl: "https://github.com/Lalith17/DocClassify",
     },
     {
       id: "5",
-      title: "Portfolio Website",
+      title: "StyleSpectrum - AI-Powered Fashion Assistant",
       description:
-        "Designed and developed a responsive portfolio website with 3D animations, interactive UI elements, and optimized performance metrics.",
+        "Developed an AI-powered fashion assistant that suggests stylish outfit combinations based on user-uploaded clothing images. Uses color analysis and decision trees for intelligent outfit matching.",
       image:
-        "https://images.unsplash.com/photo-1545239351-ef35f43d514b?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      tags: ["React", "Three.js", "Framer Motion", "Tailwind CSS"],
-      category: "Portfolio",
-      githubUrl: "https://github.com/Lalith17/portfolio",
+        "https://images.unsplash.com/photo-1520975916090-3105956dac38?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
+      tags: ["AI", "Fashion Tech", "Flask", "Computer Vision"],
+      category: "AI Applications",
+      githubUrl: "https://github.com/Lalith17/StyleSpectrum",
     },
     {
       id: "6",
-      title: "Mobile App for Event Management",
+      title: "Face Clustering with Deep Learning",
       description:
-        "Created a cross-platform mobile application for event planning and management with real-time updates and location-based services.",
+        "Implemented a facial clustering system using InsightFace for feature extraction and K-Means for grouping similar faces. Organizes images into clusters based on facial similarities.",
       image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80",
-      tags: ["Flutter", "Firebase", "Google Maps API", "Push Notifications"],
-      category: "Mobile Apps",
-      githubUrl: "https://github.com/Lalith17/event-manager",
+        "https://research.aimultiple.com/wp-content/uploads/2019/07/point_detection_research_slide.png",
+      tags: ["Deep Learning", "Face Recognition", "K-Means", "InsightFace"],
+      category: "AI & Machine Learning",
+      githubUrl: "https://github.com/Lalith17/Face-Clustering-Project",
+    },
+    {
+      id: "7",
+      title: "Firebase Community Chat App",
+      description:
+        "A real-time community-based chat application using Firebase Realtime Database. Enables users to join community channels, send messages, and view updates instantly.",
+      image:
+        "https://i.pinimg.com/originals/ca/f2/df/caf2df0bf337a8ab3808889edb9870d3.jpg",
+      tags: ["Firebase", "Realtime Database", "JavaScript", "Chat Application"],
+      category: "Web & App Development",
+      githubUrl:
+        "https://github.com/Lalith17/Firebase-Community-Chat-Application",
+    },
+    {
+      id: "8",
+      title: "Resume ATS Analysis Tool",
+      description:
+        "An AI-powered resume analysis tool using Google Generative AI (Gemini-pro) to evaluate job fit, missing keywords, and ATS compatibility for optimized applications.",
+      image:
+        "https://aitificial.blog/wp-content/uploads/2024/07/resume-ats-checkers-e1721537938426.jpg",
+      tags: [
+        "AI",
+        "Resume Analysis",
+        "Google Generative AI",
+        "Node.js",
+        "PDF Parsing",
+      ],
+      category: "AI Applications",
+      githubUrl: "https://github.com/Lalith17/ATS-FRIENDLY-RESUME",
+    },
+    {
+      id: "9",
+      title: "SpeechSentinel - Hate Speech Detection",
+      description:
+        "A web application leveraging NLP and machine learning to classify text as hate speech, offensive speech, or non-offensive speech with a Flask-based interface.",
+      image:
+        "https://repository-images.githubusercontent.com/282252594/0bc47500-d67a-11ea-9e1b-8ddadf5e9b90",
+      tags: [
+        "NLP",
+        "Flask",
+        "Machine Learning",
+        "Text Classification",
+        "Hate Speech Detection",
+      ],
+      category: "AI & Machine Learning",
+      githubUrl: "https://github.com/Lalith17/SpeechSentinel",
+    },
+    {
+      id: "10",
+      title: "Nutrition.AI - AI-Powered Dietary Guidance",
+      description:
+        "An AI-driven nutrition assistant using Gemini Pro Vision to provide personalized meal plans, dietary feedback, and wellness tips for healthier living.",
+      image:
+        "https://inkwell-oasis-s3.s3.us-west-1.amazonaws.com/peppino/medium_ai_powered_nutrition_guidance_personalized_dietary_recommendations_for_optimal_well_being_47sxx2d9d8e3nxt7fnv4v_b8becd947c.webp",
+      tags: [
+        "AI",
+        "Nutrition",
+        "HealthTech",
+        "Gemini Pro Vision",
+        "Dietary Guidance",
+      ],
+      category: "AI Applications",
+      githubUrl: "https://github.com/Lalith17/Nutrition.Ai",
+    },
+    {
+      id: "11",
+      title: "FutureVista: Human Following Robot",
+      description:
+        "An Arduino-based robot that follows humans using ultrasonic sensors, adjusting direction and maintaining a safe following distance with obstacle avoidance.",
+      image:
+        "https://circuitdigest.com/sites/default/files/projectimage_mic/human-following-robot.jpg",
+      tags: ["Arduino", "Robotics", "Ultrasonic Sensors", "Embedded Systems"],
+      category: "Web3 & IoT",
+      githubUrl: "https://github.com/Lalith17/Human-Following-Robot",
+    },
+    {
+      id: "12",
+      title: "QR Share",
+      description:
+        "A web application for secure and effortless file sharing using QR codes, enabling quick transfers between devices with a user-friendly interface.",
+      image:
+        "public/images/qrcode (1).png",
+      tags: ["QR Code", "File Sharing", "Web App", "Security"],
+      category: "Web & App Development",
+      githubUrl: "https://sharedata-e0f70.web.app",
+    },
+    {
+      id: "13",
+      title: "Automobile Theft Detection System",
+      description:
+        "A security system that detects vehicle theft using GPS tracking, motion sensors, and mobile alerts, providing real-time protection for automobiles.",
+      image:
+"https://img.vehicleservicepros.com/files/base/cygnus/vspc/image/2022/01/16x9/MA0322_T3_04.61f18b97789d9.png?auto=format%2Ccompress&fill=blur&fit=fill&h=630&w=1200",
+      tags: ["IoT", "Security", "GPS", "Arduino"],
+      category: "Web3 & IoT",
+      githubUrl: "https://github.com/Lalith17/VEHICLE-THEFT-DETECTION",
+    },
+    {
+      id: "14",
+      title: "XAFFLE: Decentralized Raffle Smart Contract",
+      description:
+        "A Solidity smart contract that facilitates decentralized NFT raffles on the Ethereum blockchain, ensuring fair and transparent winner selection.",
+      image:
+        "https://www.cointribune.com/wp-content/uploads/2019/12/smart-contract-1-780x507.png",
+      tags: ["Solidity", "Blockchain", "NFT", "Ethereum"],
+      category: "Web3 & IoT",
+      githubUrl: "https://github.com/Lalith17/DIMO-XAFFLE",
+    },
+    {
+      id: "15",
+      title: "CineSuggest: Personalized Movie Recommendation System",
+      description:
+        "A personalized movie recommendation system using machine learning to suggest movies based on user preferences such as genre, mood, cast, and director.",
+      image:
+        "https://miro.medium.com/v2/resize%3Afit%3A1358/1%2AVVOC3WBUZU87p4MMMLr7zg.png",
+      tags: [
+        "Machine Learning",
+        "Streamlit",
+        "Python",
+        "Recommendation System",
+      ],
+      category: "AI & Machine Learning",
+      githubUrl: "https://github.com/Lalith17/CineSuggest",
     },
   ],
 }) => {
@@ -153,15 +278,16 @@ const ContentSection: React.FC<ContentSectionProps> = ({
   // 3D card hover effect
   const cardVariants = {
     hover: {
-      rotateY: 5,
-      rotateX: -5,
-      scale: 1.05,
+      rotateY: 3, // Slight increase for more rotation
+      rotateX: -3, // Slight increase for more rotation
+      scale: 1.03, // Slightly larger but still subtle scale
       boxShadow:
-        "0 20px 25px -5px rgba(0, 0, 0, 0.2), 0 10px 10px -5px rgba(0, 0, 0, 0.1)",
+        "0 12px 24px -8px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05)", // Softer, smoother shadow
       transition: {
         type: "spring",
-        stiffness: 300,
-        damping: 15,
+        stiffness: 150, // Reduced stiffness for smoother movement
+        damping: 25, // Increased damping for less bounce and a smoother transition
+        mass: 0.5, // Adds a bit more "weight" to the movement, making it feel more natural
       },
     },
   };
@@ -199,7 +325,11 @@ const ContentSection: React.FC<ContentSectionProps> = ({
               <Button
                 key={category}
                 variant={activeFilter === category ? "default" : "outline"}
-                className={`rounded-full px-6 ${activeFilter === category ? "bg-purple-600 hover:bg-purple-700" : "border-gray-600 text-gray-300 hover:border-purple-500 hover:text-purple-400"}`}
+                className={`rounded-full px-6 ${
+                  activeFilter === category
+                    ? "bg-purple-600 hover:bg-purple-700 text-white"
+                    : "border-gray-500 text-gray-400 hover:border-purple-500 hover:text-purple-300"
+                }`}
                 onClick={() => setActiveFilter(category)}
               >
                 {category}
@@ -253,7 +383,7 @@ const ContentSection: React.FC<ContentSectionProps> = ({
                             alt={project.title}
                             className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                           />
-                          <div className="absolute top-3 right-3 bg-black/70 backdrop-blur-sm px-3 py-1 rounded-full">
+                          <div className="absolute top-3 right-3 bg-black/70 px-3 py-1 rounded-full">
                             <span className="text-xs text-white">
                               {project.category}
                             </span>
@@ -265,7 +395,7 @@ const ContentSection: React.FC<ContentSectionProps> = ({
                           </div>
                         </div>
                         <CardContent className="p-6">
-                          <h3 className="text-xl font-semibold text-white mb-2 group-hover:text-purple-400 transition-colors">
+                          <h3 className="text-xl font-semibold text-white mb-2 transition-colors group-hover:text-purple-300">
                             {project.title}
                           </h3>
                           <p className="text-gray-300 mb-4 text-sm">

@@ -24,21 +24,37 @@ const ContactForm: React.FC = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormState({ name: "", email: "", message: "" });
+    const formData = new FormData();
+    formData.append("name", formState.name);
+    formData.append("email", formState.email);
+    formData.append("message", formState.message);
 
-      // Reset success message after 5 seconds
-      setTimeout(() => {
-        setIsSubmitted(false);
-      }, 5000);
-    }, 1500);
+    try {
+      const response = await fetch(
+        "https://formsubmit.co/mslalith17@gmail.com",
+        {
+          method: "POST",
+          body: formData,
+        },
+      );
+
+      if (response.ok) {
+        setIsSubmitted(true);
+        setFormState({ name: "", email: "", message: "" });
+
+        setTimeout(() => setIsSubmitted(false), 5000);
+      } else {
+        console.error("Form submission failed");
+      }
+    } catch (error) {
+      console.error("Network error:", error);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (

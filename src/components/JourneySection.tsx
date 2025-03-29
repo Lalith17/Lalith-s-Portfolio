@@ -9,7 +9,6 @@ const JourneySection: React.FC = () => {
     offset: ["start end", "end start"],
   });
 
-  const opacity = useTransform(scrollYProgress, [0, 1], [1, 1]);
   const scale = useTransform(scrollYProgress, [0, 1], [1, 1]);
 
   const journeyItems = [
@@ -66,10 +65,7 @@ const JourneySection: React.FC = () => {
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=1080&q=80')] opacity-10 mix-blend-overlay"></div>
       </div>
 
-      <motion.div
-        className="max-w-5xl mx-auto relative z-10"
-        style={{ opacity, scale }}
-      >
+      <motion.div className="max-w-5xl mx-auto relative z-10" style={{ scale }}>
         <motion.div
           className="text-center mb-16"
           initial={{ opacity: 0, y: 20 }}

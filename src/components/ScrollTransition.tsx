@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
 
 interface ScrollTransitionProps {
@@ -19,46 +19,51 @@ const ScrollTransition: React.FC<ScrollTransitionProps> = ({
   delay = 0,
 }) => {
   const ref = useRef<HTMLDivElement>(null);
+  const { scrollY } = useScroll();
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: [`start ${1 - threshold}`, `end ${threshold}`],
   });
 
-  // Different animation variants based on transition type
+  const [lastScrollY, setLastScrollY] = useState(0);
+  const [isScrollingDown, setIsScrollingDown] = useState(true);
+
+  useEffect(() => {
+    return scrollY.onChange((current) => {
+      setIsScrollingDown(current > lastScrollY);
+      setLastScrollY(current);
+    });
+  }, [scrollY, lastScrollY]);
+
+  // Always define animations, but apply them conditionally
+  const opacity = useTransform(scrollYProgress, [0, 0.5, 1], [0.8, 1, 1]);
+  const x = useTransform(scrollYProgress, [0, 0.5, 1], [50, 0, 0]);
+  const scale = useTransform(scrollYProgress, [0, 0.5, 1], [0.9, 1, 1]);
+  const rotate = useTransform(scrollYProgress, [0, 0.5, 1], [5, 0, 0]);
+  const filter = useTransform(
+    scrollYProgress,
+    [0, 0.5, 1],
+    ["blur(10px)", "blur(0px)", "blur(0px)"],
+  );
+
   const getAnimationProps = () => {
+    if (!isScrollingDown) {
+      return { opacity: 1, x: 0, scale: 1, rotate: 0, filter: "blur(0px)" };
+    }
+
     switch (transitionType) {
       case "fade":
-        return {
-          opacity: useTransform(scrollYProgress, [0, 0.5, 1], [0, 1, 1]),
-        };
+        return { opacity };
       case "slide":
-        return {
-          opacity: useTransform(scrollYProgress, [0, 0.5, 1], [0, 1, 1]),
-          x: useTransform(scrollYProgress, [0, 0.5, 1], [50, 0, 0]),
-        };
+        return { opacity, x };
       case "scale":
-        return {
-          opacity: useTransform(scrollYProgress, [0, 0.5, 1], [0, 1, 1]),
-          scale: useTransform(scrollYProgress, [0, 0.5, 1], [0.8, 1, 1]),
-        };
+        return { opacity, scale };
       case "rotate":
-        return {
-          opacity: useTransform(scrollYProgress, [0, 0.5, 1], [0, 1, 1]),
-          rotate: useTransform(scrollYProgress, [0, 0.5, 1], [5, 0, 0]),
-        };
+        return { opacity, rotate };
       case "blur":
-        return {
-          opacity: useTransform(scrollYProgress, [0, 0.5, 1], [0, 1, 1]),
-          filter: useTransform(
-            scrollYProgress,
-            [0, 0.5, 1],
-            ["blur(10px)", "blur(0px)", "blur(0px)"],
-          ),
-        };
+        return { opacity, filter };
       default:
-        return {
-          opacity: useTransform(scrollYProgress, [0, 0.5, 1], [0, 1, 1]),
-        };
+        return { opacity };
     }
   };
 

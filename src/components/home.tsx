@@ -94,7 +94,7 @@ const Home: React.FC<HomeProps> = ({
 
       {/* Projects Section */}
       <div ref={projectsRef}>
-        <ScrollTransition transitionType="slide" threshold={0.3}>
+        <ScrollTransition transitionType="scale" threshold={0}>
           <ContentSection />
         </ScrollTransition>
       </div>
@@ -108,14 +108,14 @@ const Home: React.FC<HomeProps> = ({
 
       {/* Journey Section - Storytelling */}
       <div ref={journeyRef}>
-        <ScrollTransition transitionType="blur" threshold={0.3}>
+        <ScrollTransition transitionType="scale" threshold={0.2}>
           <JourneySection />
         </ScrollTransition>
       </div>
 
       {/* Resume Section with Download Option */}
       <div ref={resumeRef}>
-        <ScrollTransition transitionType="rotate" threshold={0.3}>
+        <ScrollTransition transitionType="rotate" threshold={0.2}>
           <ResumeSection />
         </ScrollTransition>
       </div>
@@ -150,7 +150,7 @@ const Home: React.FC<HomeProps> = ({
       {/* Performance Monitor - only visible when enabled */}
       {showPerformanceMonitor && (
         <PerformanceMonitor
-          visible={true}
+          visible={false}
           threshold={30}
           onPerformanceData={(data) => {
             if (data.quality === "low") {

@@ -143,7 +143,7 @@ const SkillsSection: React.FC = () => {
         name: "AWS",
         icon: (
           <img
-            src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original.svg"
+            src="https://raw.githubusercontent.com/devicons/devicon/master/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
             className="w-12 h-12"
             alt="AWS"
           />
