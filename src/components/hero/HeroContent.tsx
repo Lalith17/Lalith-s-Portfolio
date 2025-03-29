@@ -147,7 +147,7 @@ const HeroContent = ({
               Education
             </h3>
             <p className="text-gray-400 text-xs">
-              VIT-AP University, B.Tech in Computer Science (2022-2026, GPA:
+              VIT-AP University, B.Tech in Computer Science (2022-2026, CGPA:
               9.18)
             </p>
           </motion.div>

@@ -26,7 +26,7 @@ const AboutMeSection: React.FC = () => {
               <p className="text-gray-300 mb-6 text-lg">
                 I'm a computer science student at VIT-AP University with a
                 passion for full-stack development and generative AI. Currently
-                pursuing my B.Tech with a 9.18 GPA, I combine strong technical
+                pursuing my B.Tech with a 9.18 CGPA, I combine strong technical
                 foundations with real-world project experience to create
                 innovative solutions.
               </p>
@@ -43,11 +43,11 @@ const AboutMeSection: React.FC = () => {
                 Education & Leadership
               </h3>
               <p className="text-gray-300 mb-2">
-                B.Tech in Computer Science at VIT-AP University (2022-2026, GPA:
+                B.Tech in Computer Science at VIT-AP University (2022-2026, CGPA:
                 9.18)
               </p>
               <p className="text-gray-300 mb-6">
-                Intermediate at Resonance Junior College (2020-2022, GPA: 9.7)
+                Intermediate at Resonance Junior College (2020-2022, CGPA: 9.7)
               </p>
 
               <p className="text-gray-300 text-lg">
@@ -70,7 +70,7 @@ const AboutMeSection: React.FC = () => {
                   9.18
                 </span>
                 <span className="text-gray-300 text-center">
-                  University GPA
+                  University CGPA
                 </span>
               </motion.div>
 

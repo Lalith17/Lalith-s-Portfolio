@@ -26,14 +26,14 @@ const ChatAssistant: React.FC = () => {
         institution: "VIT-AP University",
         degree: "B.Tech in Computer Science",
         years: "2022 - 2026",
-        gpa: "9.18",
+        CGPA: "9.18",
       },
       {
         institution: "Resonance Junior College",
         degree: "Intermediate",
         subjects: "Mathematics, Physics, Chemistry",
         years: "2020 - 2022",
-        gpa: "9.7",
+        CGPA: "9.7",
       },
     ],
     experience: [
@@ -210,17 +210,17 @@ const ChatAssistant: React.FC = () => {
         ))
     ) {
       if (
-        lowerQuery.includes("gpa") ||
-        context.some((c) => c.includes("gpa"))
+        lowerQuery.includes("CGPA") ||
+        context.some((c) => c.includes("CGPA"))
       ) {
-        return `Lalith maintains an impressive GPA of 9.18 at VIT-AP University, which places him among the top performers in his class. During his intermediate education, he achieved a GPA of 9.7 in challenging subjects like Mathematics, Physics, and Chemistry.`;
+        return `Lalith maintains an impressive CGPA of 9.18 at VIT-AP University, which places him among the top performers in his class. During his intermediate education, he achieved a CGPA of 9.7 in challenging subjects like Mathematics, Physics, and Chemistry.`;
       }
 
       if (lowerQuery.includes("when") || lowerQuery.includes("year")) {
         return `Lalith began his B.Tech in Computer Science at VIT-AP University in 2022 and is expected to graduate in 2026. Before that, he completed his intermediate education at Resonance Junior College from 2020 to 2022.`;
       }
 
-      return `Lalith is pursuing a B.Tech in Computer Science at VIT-AP University (2022-2026) with a GPA of 9.18. He previously completed his intermediate education at Resonance Junior College (2020-2022) with a GPA of 9.7, studying Mathematics, Physics, and Chemistry. His strong academic background has provided him with a solid foundation in computer science principles and mathematical thinking.`;
+      return `Lalith is pursuing a B.Tech in Computer Science at VIT-AP University (2022-2026) with a CGPA of 9.18. He previously completed his intermediate education at Resonance Junior College (2020-2022) with a CGPA of 9.7, studying Mathematics, Physics, and Chemistry. His strong academic background has provided him with a solid foundation in computer science principles and mathematical thinking.`;
     }
 
     // Experience related queries
@@ -451,7 +451,7 @@ const ChatAssistant: React.FC = () => {
       lowerQuery.includes("introduction") ||
       lowerQuery.includes("background")
     ) {
-      return `Megha Sai Lalith Vallamkonda is a Computer Science student at VIT-AP University (2022-2026) with a strong academic record (GPA: 9.18) and practical experience in software development. He has worked as a Generative AI Intern at Cloud9Vacation.com and as a Full Stack Developer at Honeyfilm Pvt Ltd. His technical skills include Java, Python, JavaScript, Flutter, Firebase, and AWS. He's also co-authored a research paper on hybrid ML-DL models presented at an IEEE conference. Beyond academics, he serves as President of the Milestone Club, managing 150+ participants in technical events. Lalith is passionate about building scalable applications and exploring AI/ML technologies.`;
+      return `Megha Sai Lalith Vallamkonda is a Computer Science student at VIT-AP University (2022-2026) with a strong academic record (CGPA: 9.18) and practical experience in software development. He has worked as a Generative AI Intern at Cloud9Vacation.com and as a Full Stack Developer at Honeyfilm Pvt Ltd. His technical skills include Java, Python, JavaScript, Flutter, Firebase, and AWS. He's also co-authored a research paper on hybrid ML-DL models presented at an IEEE conference. Beyond academics, he serves as President of the Milestone Club, managing 150+ participants in technical events. Lalith is passionate about building scalable applications and exploring AI/ML technologies.`;
     }
 
     // Default response for other queries
