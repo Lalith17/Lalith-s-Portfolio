@@ -73,6 +73,17 @@
 
   body {
     @apply bg-background text-foreground transition-colors duration-300;
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+html {
+    overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
 
   /* Force dark mode styles for specific elements regardless of theme */
