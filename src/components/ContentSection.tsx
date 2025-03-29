@@ -75,7 +75,7 @@ const ContentSection: React.FC<ContentSectionProps> = ({
       description:
         "Built a document classification system using FastAPI, OpenCV, and Tesseract OCR to classify invoices, emails, and resumes. Integrated a machine learning model with Random Forest for accurate classification.",
       image:
-    "https://www.slideteam.net/media/catalog/product/cache/1280x720/d/o/document_process_workflow_automation_illustration_slide01.jpg",
+        "https://www.slideteam.net/media/catalog/product/cache/1280x720/d/o/document_process_workflow_automation_illustration_slide01.jpg",
       tags: ["AI", "OCR", "Machine Learning", "FastAPI"],
       category: "AI & Machine Learning",
       githubUrl: "https://github.com/Lalith17/DocClassify",
@@ -181,8 +181,7 @@ const ContentSection: React.FC<ContentSectionProps> = ({
       title: "QR Share",
       description:
         "A web application for secure and effortless file sharing using QR codes, enabling quick transfers between devices with a user-friendly interface.",
-      image:
-        "public/images/qrcode (1).png",
+      image: "public/images/qrcode.png",
       tags: ["QR Code", "File Sharing", "Web App", "Security"],
       category: "Web & App Development",
       githubUrl: "https://sharedata-e0f70.web.app",
@@ -193,7 +192,7 @@ const ContentSection: React.FC<ContentSectionProps> = ({
       description:
         "A security system that detects vehicle theft using GPS tracking, motion sensors, and mobile alerts, providing real-time protection for automobiles.",
       image:
-"https://img.vehicleservicepros.com/files/base/cygnus/vspc/image/2022/01/16x9/MA0322_T3_04.61f18b97789d9.png?auto=format%2Ccompress&fill=blur&fit=fill&h=630&w=1200",
+        "https://img.vehicleservicepros.com/files/base/cygnus/vspc/image/2022/01/16x9/MA0322_T3_04.61f18b97789d9.png?auto=format%2Ccompress&fill=blur&fit=fill&h=630&w=1200",
       tags: ["IoT", "Security", "GPS", "Arduino"],
       category: "Web3 & IoT",
       githubUrl: "https://github.com/Lalith17/VEHICLE-THEFT-DETECTION",
@@ -229,7 +228,7 @@ const ContentSection: React.FC<ContentSectionProps> = ({
 }) => {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: false, amount: 0.2 });
-  const [activeFilter, setActiveFilter] = useState("All");
+  const [activeFilter, setActiveFilter] = useState("AI & Machine Learning");
   const [searchQuery, setSearchQuery] = useState("");
 
   // Get unique categories from projects
@@ -277,17 +276,14 @@ const ContentSection: React.FC<ContentSectionProps> = ({
 
   // 3D card hover effect
   const cardVariants = {
-    hover: {
-      rotateY: 3, // Slight increase for more rotation
-      rotateX: -3, // Slight increase for more rotation
-      scale: 1.03, // Slightly larger but still subtle scale
-      boxShadow:
-        "0 12px 24px -8px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.05)", // Softer, smoother shadow
-      transition: {
-        type: "spring",
-        stiffness: 150, // Reduced stiffness for smoother movement
-        damping: 25, // Increased damping for less bounce and a smoother transition
-        mass: 0.5, // Adds a bit more "weight" to the movement, making it feel more natural
+        hover: {
+          scale: 1.03, // Slightly bigger effect for a smooth hover
+          boxShadow:
+            "0 10px 20px rgba(0, 0, 0, 0.1), 0 6px 6px rgba(0, 0, 0, 0.05)", // Soft shadow
+          transition: {
+            type: "spring",
+            stiffness: 200,
+            damping: 20,
       },
     },
   };
@@ -355,7 +351,7 @@ const ContentSection: React.FC<ContentSectionProps> = ({
           <motion.div
             className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20 perspective-1000"
             initial="hidden"
-            animate={isInView ? "visible" : "hidden"}
+            animate={"visible"}
             variants={containerVariants}
           >
             {filteredProjects.length > 0 ? (
