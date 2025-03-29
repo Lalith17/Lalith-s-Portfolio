@@ -1,4 +1,4 @@
-# 🌐 Megha Sai Lalith Vallamkonda's Personal Portfolio Website
+# 🌐 Megha Sai Lalith Vallamkonda's Portfolio Website
 
 A **futuristic, techy, and interactive** portfolio website designed to showcase my skills, projects, and professional journey. Built with **React, TypeScript, and Framer Motion**, this portfolio emphasizes performance, responsiveness, and modern UI/UX.
 
@@ -69,6 +69,9 @@ This project is licensed under the MIT License.
 
 👤 Author
 Megha Sai Lalith Vallamkonda
+
 📧 mslalith17@gmail.com
+
 🔗 https://www.linkedin.com/in/lalithvallamkonda
+
 🐙 https://github.com/Lalith17
