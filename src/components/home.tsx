@@ -108,14 +108,14 @@ const Home: React.FC<HomeProps> = ({
 
       {/* Journey Section - Storytelling */}
       <div ref={journeyRef}>
-        <ScrollTransition transitionType="scale" threshold={0.2}>
+        <ScrollTransition transitionType="scale" threshold={0.4}>
           <JourneySection />
         </ScrollTransition>
       </div>
 
       {/* Resume Section with Download Option */}
       <div ref={resumeRef}>
-        <ScrollTransition transitionType="rotate" threshold={0.2}>
+        <ScrollTransition transitionType="scale" threshold={0.2}>
           <ResumeSection />
         </ScrollTransition>
       </div>

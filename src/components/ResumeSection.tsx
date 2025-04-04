@@ -67,7 +67,7 @@ const ResumeSection: React.FC = () => {
               title="B.Tech in Computer Science"
               company="VIT-AP University"
               date="2022 - 2026"
-              description="CGPA: 9.18"
+              description="CGPA: 9.22"
             />
             <TimelineItem
               title="Intermediate"

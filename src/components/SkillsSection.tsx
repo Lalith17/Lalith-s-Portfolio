@@ -46,12 +46,6 @@ const SkillsSection: React.FC = () => {
         color: "#3178C6",
       },
       {
-        name: "C++",
-        icon: <span className="text-4xl font-bold">C++</span>,
-        level: 75,
-        color: "#00599C",
-      },
-      {
         name: "HTML/CSS",
         icon: <Globe className="w-12 h-12" />,
         level: 90,
@@ -180,12 +174,6 @@ const SkillsSection: React.FC = () => {
         ),
         level: 70,
         color: "#2496ED",
-      },
-      {
-        name: "Kubernetes",
-        icon: <Layers className="w-12 h-12" />,
-        level: 65,
-        color: "#326CE5",
       },
     ],
   };

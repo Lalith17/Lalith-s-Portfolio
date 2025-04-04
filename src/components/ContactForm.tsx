@@ -28,30 +28,24 @@ const ContactForm: React.FC = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    const formData = new FormData();
-    formData.append("name", formState.name);
-    formData.append("email", formState.email);
-    formData.append("message", formState.message);
+    const formData = new URLSearchParams();
+    formData.append("entry.830155795", formState.name); // Replace with actual entry ID
+    formData.append("entry.1439669860", formState.email); // Replace with actual entry ID
+    formData.append("entry.571975671", formState.message); // Replace with actual entry ID
 
     try {
-      const response = await fetch(
-        "https://formsubmit.co/mslalith17@gmail.com",
-        {
-          method: "POST",
-          body: formData,
-        },
-      );
+      await fetch("https://docs.google.com/forms/d/e/1FAIpQLSfgfXfWGnr17laUuHEUiMs3HJfYsixcbm9J-owk__Mm8Damfw/formResponse", {
+        method: "POST",
+        body: formData,
+        mode: "no-cors",  // Required for Google Forms
+      });
 
-      if (response.ok) {
-        setIsSubmitted(true);
-        setFormState({ name: "", email: "", message: "" });
+      setIsSubmitted(true);
+      setFormState({ name: "", email: "", message: "" });
 
-        setTimeout(() => setIsSubmitted(false), 5000);
-      } else {
-        console.error("Form submission failed");
-      }
+      setTimeout(() => setIsSubmitted(false), 5000);
     } catch (error) {
-      console.error("Network error:", error);
+      console.error("Error submitting form:", error);
     } finally {
       setIsSubmitting(false);
     }
